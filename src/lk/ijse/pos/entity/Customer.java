@@ -1,7 +1,12 @@
 package lk.ijse.pos.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Customer implements SuperEntity {
 
+    @Id
     private String id;
     private String name;
     private String address;

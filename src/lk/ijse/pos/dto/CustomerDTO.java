@@ -1,7 +1,10 @@
 package lk.ijse.pos.dto;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+@Entity
 public class CustomerDTO {
-
+@Id
     private String id;
     private String name;
     private String address;

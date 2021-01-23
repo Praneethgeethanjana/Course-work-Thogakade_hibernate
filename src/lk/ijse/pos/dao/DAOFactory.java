@@ -13,10 +13,10 @@ public class DAOFactory {
     }
 
     public enum DAOType {
-        CUSTOMER, ITEM
+        CUSTOMER
     }
 
-    public <T> T getDao(DAOType type) {
+    public <T extends SuperDAO> T getDao(DAOType type) {
         switch (type) {
             case CUSTOMER:
                 return (T) new CustomerDAOimpl();

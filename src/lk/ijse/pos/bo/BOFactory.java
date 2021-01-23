@@ -13,10 +13,10 @@ public class BOFactory {
     }
 
     public enum BOType{
-        CUSTOMER,ITEM
+        CUSTOMER
     }
 
-    public <T> T getBo(BOType boType){
+    public <T extends SuperBO> T getBo(BOType boType){
         switch (boType){
             case CUSTOMER:
                 return (T) new CustomerBOimpl();

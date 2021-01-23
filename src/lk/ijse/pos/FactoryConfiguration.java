@@ -10,7 +10,7 @@ public class FactoryConfiguration {
     private SessionFactory sessionFactory;
 
     private FactoryConfiguration(){
-        Configuration configuration=new Configuration().addAnnotatedClass(Customer.class);
+        Configuration configuration=new Configuration().configure().addAnnotatedClass(Customer.class);
 
         sessionFactory=configuration.buildSessionFactory();
 
