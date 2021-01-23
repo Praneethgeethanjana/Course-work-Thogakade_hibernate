@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="318.0" prefWidth="486.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pos.controller.MainFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="147.0" layoutY="22.0" prefHeight="41.0" prefWidth="183.0" text="Thogakade">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="77.0" fitWidth="77.0" layoutX="200.0" layoutY="122.0" onMouseClicked="#onItemClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/img-item.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="91.0" fitWidth="98.0" layoutX="58.0" layoutY="113.0" onMouseClicked="#onCustomerClick">
+         <image>
+            <Image url="@../asserts/img-customer.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="77.0" fitWidth="98.0" layoutX="318.0" layoutY="122.0" onMouseClicked="#onOrderClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/img-place-order.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

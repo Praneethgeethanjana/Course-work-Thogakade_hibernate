@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="482.0" prefWidth="727.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pos.controller.CustomerController">
+   <children>
+      <Label alignment="CENTER" layoutX="259.0" layoutY="14.0" prefHeight="46.0" prefWidth="196.0" text="Customer">
+         <font>
+            <Font name="Calibri" size="32.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtID" layoutX="14.0" layoutY="91.0" prefHeight="31.0" prefWidth="167.0" promptText="Customer_ID" />
+      <TextField fx:id="txtName" layoutX="190.0" layoutY="91.0" prefHeight="31.0" prefWidth="167.0" promptText="Customer_Name" />
+      <TextField fx:id="txtAddress" layoutX="370.0" layoutY="91.0" prefHeight="31.0" prefWidth="160.0" promptText="Address" />
+      <TextField fx:id="txtSalary" layoutX="546.0" layoutY="91.0" prefHeight="31.0" prefWidth="167.0" promptText="Salary" />
+      <JFXButton layoutX="34.0" layoutY="129.0" onAction="#btnOnSaveAction" prefHeight="38.0" prefWidth="101.0" style="-fx-background-color: #290;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></JFXButton>
+      <TableView fx:id="tblCustomer" layoutX="5.0" layoutY="183.0" prefHeight="301.0" prefWidth="717.0">
+        <columns>
+          <TableColumn fx:id="tblCusID" prefWidth="115.0" text="Customer_ID" />
+          <TableColumn fx:id="tblCusName" prefWidth="140.0" text="Customer_Name" />
+            <TableColumn fx:id="tblAddress" prefWidth="136.0" text="Address" />
+            <TableColumn fx:id="tblSalary" prefWidth="155.0" text="Salary" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="190.0" layoutY="129.0" prefHeight="38.0" prefWidth="101.0" style="-fx-background-color: #290;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
