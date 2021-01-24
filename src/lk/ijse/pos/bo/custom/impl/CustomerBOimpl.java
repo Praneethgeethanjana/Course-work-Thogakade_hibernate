@@ -7,6 +7,7 @@ import lk.ijse.pos.dto.CustomerDTO;
 import lk.ijse.pos.entity.Customer;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CustomerBOimpl implements CustomerBO {
 
@@ -21,7 +22,7 @@ public class CustomerBOimpl implements CustomerBO {
 
     @Override
     public boolean deleteCustomer(String id) throws Exception {
-        return false;
+        return customerDAO.delete(id);
     }
 
     @Override
@@ -39,6 +40,17 @@ public class CustomerBOimpl implements CustomerBO {
 
     @Override
     public ArrayList<CustomerDTO> getAllCustomers() throws Exception {
-        return null;
+        List<Customer> cList=customerDAO.getAll();
+        ArrayList<CustomerDTO> dtoList=new ArrayList();
+        for (Customer customer: cList){
+            dtoList.add(new CustomerDTO(
+                    customer.getId(),
+                    customer.getName(),
+                    customer.getAddress(),
+                    customer.getSalary()
+            ));
+        }
+
+        return dtoList;
     }
 }

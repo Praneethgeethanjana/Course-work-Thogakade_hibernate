@@ -1,17 +1,17 @@
 package lk.ijse.pos.dao.custom.impl;
 
 import lk.ijse.pos.FactoryConfiguration;
-import lk.ijse.pos.dao.custom.CustomerDAO;
+import lk.ijse.pos.dao.custom.ItemDAO;
 import lk.ijse.pos.entity.Customer;
+import lk.ijse.pos.entity.Item;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.hibernate.query.Query;
 
 import java.util.List;
 
-public class CustomerDAOimpl implements CustomerDAO {
+public class ItemDAOimpl implements ItemDAO {
     @Override
-    public boolean save(Customer entity) throws Exception {
+    public boolean save(Item entity) throws Exception {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
 
@@ -24,54 +24,42 @@ public class CustomerDAOimpl implements CustomerDAO {
 
     @Override
     public boolean delete(String s) throws Exception {
-        Session session = FactoryConfiguration.getInstance().getSession();
-        Transaction transaction = session.beginTransaction();
+       Session session=FactoryConfiguration.getInstance().getSession();
+       Transaction transaction=session.beginTransaction();
 
-        Customer customer=session.get(Customer.class,s);
+       Item item=session.get(Item.class,s);
 
-        session.delete(customer);
-
-        transaction.commit();
-        session.close();
-        return true;
-
+       session.delete(item);
+       transaction.commit();
+       session.close();
+       return true;
     }
 
     @Override
-    public boolean update(Customer entity) throws Exception {
+    public boolean update(Item entity) throws Exception {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
 
         session.update(entity);
-
         transaction.commit();
         session.close();
         return false;
     }
 
     @Override
-    public Customer get(String s) throws Exception {
+    public Item get(String s) throws Exception {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
 
-        Customer customer = session.get(Customer.class, s);
+        Item item = session.get(Item.class, s);
 
         transaction.commit();
         session.close();
-       return customer;
+        return item;
     }
 
     @Override
-    public List<Customer> getAll() throws Exception {
-//        Session session = FactoryConfiguration.getInstance().getSession();
-//        Transaction transaction = session.beginTransaction();
-//
-//      Query query=session.createQuery("FROM Customer");
-//      List list=query.list();
-//
-//        transaction.commit();
-//        session.close();
-//        return list;
+    public List<Item> getAll() throws Exception {
         return null;
     }
 }

@@ -44,8 +44,14 @@ public class MainFormController {
 
 
 
-    public void onItemClick(MouseEvent mouseEvent) {
+    public void onItemClick(MouseEvent mouseEvent) throws IOException {
 
+        URL resource = this.getClass().getResource("/lk/ijse/pos/view/ItemForm.fxml");
+        Parent parent=FXMLLoader.load(resource);
+        Scene scene=new Scene(parent);
+        Stage stage=new Stage();
+        stage.setScene(scene);
+        stage.show();
     }
 
     public void onOrderClick(MouseEvent mouseEvent) {

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="489.0" prefWidth="506.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pos.controller.ItemController">
+   <children>
+      <Label alignment="CENTER" layoutX="150.0" layoutY="14.0" prefHeight="31.0" prefWidth="166.0" text="Item">
+         <font>
+            <Font name="Calibri Bold" size="28.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtSearch" layoutX="276.0" layoutY="93.0" onAction="#SearchOnAction" promptText="Search" />
+      <JFXButton layoutX="309.0" layoutY="191.0" onAction="#btnSaveOnAction" prefHeight="38.0" prefWidth="89.0" style="-fx-background-color: #290;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="309.0" layoutY="257.0" onAction="#btnUpdateOnAction" prefHeight="38.0" prefWidth="89.0" style="-fx-background-color: orange;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtCode" layoutX="57.0" layoutY="124.0" promptText="Item_Code" />
+      <JFXTextField fx:id="txtItemDes" layoutX="57.0" layoutY="194.0" promptText="Description" />
+      <JFXTextField fx:id="txtItemQty" layoutX="57.0" layoutY="276.0" promptText="QtyOnHand" />
+      <JFXTextField fx:id="txtItemPrice" layoutX="57.0" layoutY="347.0" promptText="Price" />
+   </children>
+</AnchorPane>
